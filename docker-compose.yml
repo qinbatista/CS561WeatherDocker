@@ -1,0 +1,16 @@
+version: "1.0.0"
+services:
+  server:
+    build: .
+    volumes:
+      - /Users/qin/qinProject/OSUProgram/CS561SOFTWAREENGINEERINGMETHODS/Week8/WeatherDocker:/WeatherDocker
+    environment:
+      - USER=qin
+    ports:
+      - "3000:3000"
+  client:
+    image: "swiftlang/swift:nightly-focal"
+    volumes:
+      - /Users/qin/qinProject/OSUProgram/CS561SOFTWAREENGINEERINGMETHODS/Week8/WeatherDocker:/labs
+    environment:
+      - USER=will
