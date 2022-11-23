@@ -3,7 +3,7 @@ services:
   server:
     build: .
     volumes:
-      - /Users/qin/qinProject/OSUProgram/CS561SOFTWAREENGINEERINGMETHODS/Week8/WeatherDocker:/WeatherDocker
+      - /Users/batista/QinProject/OSUProgram/CS561WeatherDocker:/WeatherDocker
     environment:
       - USER=qin
     ports:
@@ -11,6 +11,6 @@ services:
   client:
     image: "swiftlang/swift:nightly-focal"
     volumes:
-      - /Users/qin/qinProject/OSUProgram/CS561SOFTWAREENGINEERINGMETHODS/Week8/WeatherDocker:/labs
+      - /Users/batista/QinProject/OSUProgram/CS561WeatherDocker:/labs
     environment:
       - USER=will
